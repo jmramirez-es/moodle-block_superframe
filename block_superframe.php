@@ -78,9 +78,25 @@ class block_superframe extends block_base {
         $this->content->footer = '';
         $this->content->text = get_string('welcomeuser', 'block_superframe',
                 $USER);
+		$this->content->text .= '<p>' .get_string('message', 'block_superframe'). '</p>';
 
         return $this->content;
     }
+	
+//	public function specialization() {
+//		if (isset($this->config)) {
+//			if (empty($this->config->title)) {
+//				$this->title = get_string('defaulttitle', 'block_superframe');            
+//			} else {
+//				$this->title = $this->config->title;
+//			}
+//
+//			if (empty($this->config->text)) {
+//				$this->config->text = get_string('defaulttext', 'block_superframe');
+//			}    
+//		}
+//	}
+	
     /**
      * This is a list of places where the block may or
      * may not be added.
